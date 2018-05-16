@@ -1,0 +1,33 @@
+Started by user [8mha:////4MNLgVPaPRK8eDom4qjV2s1z7ZTwlIA32UbbnzeN1ReuAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9otJioDEA5yPOuMEAAAA=[0mruslan
+Building in workspace /var/jenkins_home/workspace/build_docker_by_ansible
+Cloning the remote Git repository
+Cloning repository https://github.com/rus-dev1989/ansible.git
+ > git init /var/jenkins_home/workspace/build_docker_by_ansible # timeout=10
+Fetching upstream changes from https://github.com/rus-dev1989/ansible.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/rus-dev1989/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/rus-dev1989/ansible.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/rus-dev1989/ansible.git # timeout=10
+Fetching upstream changes from https://github.com/rus-dev1989/ansible.git
+ > git fetch --tags --progress https://github.com/rus-dev1989/ansible.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c377c5e2bd009ac021a87a5c6b65721db027f083 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c377c5e2bd009ac021a87a5c6b65721db027f083
+Commit message: "ansible"
+First time build. Skipping changelog.
+[build_docker_by_ansible] $ /bin/bash /tmp/jenkins3603446447787367009.sh
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [54.165.197.33]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Host key verification failed.\r\n", "unreachable": true}
+	to retry, use: --limit @/var/jenkins_home/workspace/build_docker_by_ansible/docker/docker.retry
+
+PLAY RECAP *********************************************************************
+54.165.197.33              : ok=0    changed=0    unreachable=1    failed=0   
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
