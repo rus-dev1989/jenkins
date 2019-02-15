@@ -13,9 +13,9 @@ RUN curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-co
     chmod +x /usr/local/bin/docker-compose
 
 RUN cd /opt && git clone https://github.com/kubernetes-incubator/kubespray.git
-#Install Maven
-RUN cd /opt && wget http://apache.mirror.digitalpacific.com.au/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
-    tar -xzvf ~/Downloads/apache-maven-3.3.9-bin.tar.gz && \
-    update-alternatives --install /usr/bin/mvn maven /opt/apache-maven-3.3.9/bin/mvn 1001
 
+RUN cd /opt && wget http://apache.mirror.digitalpacific.com.au/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
+    tar -xzvf apache-maven-3.3.9-bin.tar.gz && \
+    update-alternatives --install /usr/bin/mvn maven /opt/apache-maven-3.3.9/bin/mvn 1001
+    
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
